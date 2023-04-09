@@ -1,0 +1,33 @@
+# server
+server:
+  name:
+  schema: http
+  host: 0.0.0.0
+  port: 8080
+
+# database 数据库相关配置
+database:
+  host: 0.0.0.0
+  port: 5432
+  user: root
+  password:
+  dbname: test
+  sslmode: disable
+  timeZone: Asia/Shanghai
+  maxIdle: 10 # 设置空闲连接池中的连接的最大数量
+  maxOpen: 100 # 设置打开数据库连接的最大数量
+  maxLifetime: 300 # 设置连接可复用的最大时间
+  logmode: info # 1:Silent 2:Error 3:Warn 4:Info 值越小级别越高
+
+#redis
+redis:
+  host: 0.0.0.0
+  port: 6379
+  password:
+  maxIdle: 10
+  maxActive: 100
+  idleTimeout: 300
+
+# 日志级别 debug, info, warn, error, panic, fatal
+log:
+    level: debug
